@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events — Yantrix · Robotics & Aviation Club, DYPIU</title>
+<meta name="description" content="Workshops, flight days and competitions from Yantrix, the robotics and aviation club of DY Patil International University.">
+<meta name="theme-color" content="#050a17">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" href="assets/fonts/BigShouldersDisplay-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="events">
+<main>
+
+  <section class="phead phead--video theme-ink">
+    <div class="phead__bg"><video id="evVideo" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true"><source src="assets/video/hero.webm" type="video/webm"><source src="assets/video/hero.mp4" type="video/mp4"></video></div>
+    <div class="wrap">
+      <p class="crumb label"><b>03</b> / Events</p>
+      <h1 class="display h-xl ln-group" data-now><span class="ln"><span>Come see it</span></span><span class="ln"><span><span class="accent">happen.</span></span></span></h1>
+      <div class="phead__meta">
+        <p class="rv" data-now>Workshops where you build something, flight days where we fly it, and challenges where teams compete. New events are posted here as soon as they're confirmed.</p>
+        <a class="link-arrow rv" data-now href="join.html">Get notified <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec theme-light" style="padding-top:clamp(60px,8vw,110px)">
+    <div class="wrap">
+      <div class="tabs" id="tabs" role="group" aria-label="Filter events"></div>
+      <div class="evl" id="upcoming"></div>
+    </div>
+  </section>
+
+  <section class="sec theme-light" style="padding-top:0">
+    <div class="wrap">
+      <p class="label tag rv">Past events</p>
+      <div class="empty" id="past">
+        <h2 class="display h-md">The archive</h2><p class="lede">Past events appear here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec theme-light" style="padding-top:0">
+    <div class="wrap">
+      <p class="label tag rv" style="margin-bottom:34px">How we run things</p>
+      <ul class="formats">
+        <li class="rv"><span class="label muted">01</span><h3>Workshops</h3><p>Small groups, one bench, one thing to build. You leave with something that works and knowing why.</p></li>
+        <li class="rv"><span class="label muted">02</span><h3>Flight days</h3><p>The aircraft come out of the lab. Watch, ask questions, and see what testing really looks like.</p></li>
+        <li class="rv"><span class="label muted">03</span><h3>Challenges</h3><p>Teams, a clock and a problem to solve. Built to be hard, fair and a lot of fun.</p></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/events.js"></script>
+<script>(function(){var v=document.getElementById("evVideo");v.muted=true;var go=function(){v.play().catch(function(){})};go();document.addEventListener("visibilitychange",go);["click","touchstart","scroll"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})})})();</script>
+</body>
+</html>

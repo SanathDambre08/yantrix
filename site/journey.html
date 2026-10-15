@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journey — Yantrix · Robotics & Aviation Club, DYPIU</title>
+<meta name="description" content="The story of Yantrix so far: milestones, events and how we build.">
+<meta name="theme-color" content="#050a17">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" href="assets/fonts/BigShouldersDisplay-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="journey">
+<main>
+
+  <section class="phead theme-ink" style="min-height:78vh;display:flex;align-items:flex-end">
+    <div class="phead__bg"><video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;opacity:.5"><source src="assets/video/hero.webm" type="video/webm"><source src="assets/video/hero.mp4" type="video/mp4"></video></div>
+    <div class="wrap">
+      <p class="crumb label"><b>02</b> / Journey</p>
+      <h1 class="display h-xl ln-group" data-now><span class="ln"><span>The story</span></span><span class="ln"><span><span class="accent">so far.</span></span></span></h1>
+      <div class="phead__meta">
+        <p class="rv" data-now>Yantrix is new. This is where we keep track of how it started, what we've done and where it's heading.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec theme-light">
+    <div class="wrap">
+      <p class="label tag rv">Milestones</p>
+      <h2 class="display h-lg ln-group" style="margin:22px 0 clamp(36px,5vw,70px)"><span class="ln"><span>Where we've been</span></span></h2>
+      <div class="evl" id="story"></div>
+    </div>
+  </section>
+
+  <!-- HORIZONTAL FILM STRIP -->
+  <section class="hs theme-ink" aria-label="Photos from past Yantrix events, a sideways-scrolling strip">
+    <div class="hs__stick">
+      <div class="hs__head wrap">
+        <p class="label tag">Glimpses of past events</p>
+        <p class="label hs__count"><b id="hsn">01</b> / 06</p>
+      </div>
+      <div class="hs__track" id="hsTrack">
+        <figure class="hs__p"><img src="assets/gallery/yx-8.jpg" alt="Team Yantrix receiving the second prize cheque for Hardware at the DYPIU Internal Hackathon" style="object-position:50% 55%"><figcaption><span class="label">01</span><h3 class="display">Second prize</h3><p>DYPIU Internal Hackathon (SIH'26). Team Yantrix took second place in the Hardware category.</p></figcaption></figure>
+        <figure class="hs__p"><img src="assets/gallery/yx-2.jpg" alt="The Yantrix team and mentors posing with thumbs up in front of a Thank You slide" style="object-position:50% 45%"><figcaption><span class="label">02</span><h3 class="display">Together</h3><p>The team and our mentors after the event.</p></figcaption></figure>
+        <figure class="hs__p hs__p--tall"><img src="assets/gallery/yx-6.jpg" alt="A mentor speaking at the Yantrix event with the framed Yantrix badge and robot beside her" style="object-position:50% 55%"><figcaption><span class="label">03</span><h3 class="display">On stage</h3><p>Introducing Yantrix, with the badge and our robot on the table.</p></figcaption></figure>
+        <figure class="hs__p hs__p--tall"><img src="assets/gallery/yx-7.jpg" alt="The Yantrix robot in front of the framed club badge" style="object-position:50% 60%"><figcaption><span class="label">04</span><h3 class="display">Our robot</h3><p>Built by the club and shown in front of the Yantrix badge.</p></figcaption></figure>
+        <figure class="hs__p hs__p--tall"><img src="assets/gallery/yx-4.jpg" alt="Six Yantrix members posing together with the robot" style="object-position:50% 50%"><figcaption><span class="label">05</span><h3 class="display">The builders</h3><p>The people who built it.</p></figcaption></figure>
+        <figure class="hs__p hs__p--tall hs__p--last"><img src="assets/gallery/yx-3.jpg" alt="Two Yantrix members pointing at the robot they are holding" style="object-position:50% 50%"><figcaption><span class="label">06</span><h3 class="display">Show and tell</h3><p>Next up is yours. <a class="link-arrow" href="join.html">Join Yantrix <span class="arr">→</span></a></p></figcaption></figure>
+      </div>
+      <div class="hs__bar"><i></i></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec theme-light">
+    <div class="wrap proc">
+      <div class="proc__head">
+        <p class="label tag rv">The way we build</p>
+        <h2 class="display h-lg ln-group" style="margin-top:24px"><span class="ln"><span>Five steps,</span></span><span class="ln"><span>no shortcuts.</span></span></h2>
+        <p class="rv">Every project at Yantrix, from a line-following robot to a fixed-wing aircraft, goes through the same loop. Nobody gets it right first time — the loop is the point.</p>
+      </div>
+      <div>
+        <div class="step rv"><span class="step__n">01</span><div><h3>Discover</h3><p>Pick a real problem and a clear goal. What should this machine do, and how will we know it did it?</p></div></div>
+        <div class="step rv"><span class="step__n">02</span><div><h3>Design</h3><p>Sketch, model, calculate. CAD for the structure, schematics for the electronics, a plan for the software.</p></div></div>
+        <div class="step rv"><span class="step__n">03</span><div><h3>Prototype</h3><p>Print it, cut it, solder it, flash it. A rough working version beats a perfect drawing every time.</p></div></div>
+        <div class="step rv"><span class="step__n">04</span><div><h3>Test</h3><p>Run it, fly it, break it. Log what happened, work out why, change one thing, go again.</p></div></div>
+        <div class="step rv"><span class="step__n">05</span><div><h3>Demonstrate</h3><p>Show it working, to the club, the campus and anyone who'll watch. Then write down what we learned for the next team.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENCH TO ORBIT -->
+  <section class="scrub scrub--dark" data-map="0:0,0.3:1.1,0.62:4.4,1:9.95" aria-label="From the workbench to the solar system, scrubbed by scroll">
+    <div class="scrub__stick">
+      <div class="scrub__txt">
+        <div class="beat" data-at="0-0.3">
+          <p class="label tag">On the bench</p>
+          <h2 class="display h-lg">It starts small.</h2>
+          <p>A prototype on a table, a laptop full of tabs, and one idea that might not work yet.</p>
+        </div>
+        <div class="beat" data-at="0.3-0.62">
+          <p class="label tag">Off the ground</p>
+          <h2 class="display h-lg">Then it leaves the lab.</h2>
+          <p>Real wind, real noise, real mistakes. Testing is where a project turns into engineering.</p>
+        </div>
+        <div class="beat" data-at="0.62-1">
+          <p class="label tag">Beyond</p>
+          <h2 class="display h-lg">Then we ask how far it can go.</h2>
+          <p>Robots and aircraft are how people have always reached further. We're only getting started.</p>
+        </div>
+      </div>
+      <div class="scrub__vid frame">
+        <video muted playsinline preload="none" tabindex="-1" aria-hidden="true"><source src="assets/video/orbit-scrub.mp4" type="video/mp4"></video>
+        <span class="frame-label label" data-tc>T+00.00s</span>
+      </div>
+      <div class="scrub__bar"><i></i></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img class="cta__logo" src="assets/img/logo.png" alt="">
+    <div class="wrap" style="position:relative">
+      <p class="label tag rv">Your part of the journey</p>
+      <h2 class="display ln-group" style="margin-top:24px"><span class="ln"><span>Start yours</span></span><span class="ln"><span>here.</span></span></h2>
+      <div class="cta__row">
+        <p class="rv">Every build begins with someone deciding to show up. Apply to Yantrix and pick your first project.</p>
+        <a class="btn rv" href="join.html">Join Yantrix <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/journey.js"></script>
+<script src="assets/js/scrub.js"></script>
+</body>
+</html>

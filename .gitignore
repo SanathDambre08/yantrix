@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Environment variables & secrets (NEVER commit secrets or API keys)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.secret
+*.token
+credentials.json
+*id_rsa*
+
+# Raw source assets & footage (not used by production website)
+1792018228678448.mp4
+robot rotating video.mp4
+robot to solar system video .mp4
+yantrix logo.png
+fps clips*
+"fps clips - from earth to college "/
+
+# Python cache & temp
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+.venv/
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

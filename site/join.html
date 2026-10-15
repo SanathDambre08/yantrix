@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join us — Yantrix · Robotics & Aviation Club, DYPIU</title>
+<meta name="description" content="Apply to join Yantrix, the robotics and aviation club of DY Patil International University, Pune.">
+<meta name="theme-color" content="#050a17">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preload" href="assets/fonts/BigShouldersDisplay-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="join">
+<main>
+
+  <section class="sec theme-dark" style="padding-top:calc(var(--header-h) + clamp(60px,9vw,130px))">
+    <div class="wrap join">
+      <div class="join__side">
+        <p class="crumb label"><b>06</b> / Join us</p>
+        <h1 class="display h-lg ln-group" data-now><span class="ln"><span>Come build</span></span><span class="ln"><span class="accent">with us.</span></span></h1>
+        <p class="lede rv" data-now style="margin-top:28px;color:#cfd5e4">Tell us who you are and what you'd like to make. You don't need to have built anything before — you just need to want to.</p>
+        <ol class="join__list">
+          <li class="rv"><b>01</b><div><strong>Apply</strong><span>Fill in the form. It takes about two minutes.</span></div></li>
+          <li class="rv"><b>02</b><div><strong>Say hello</strong><span>Someone from the core team gets in touch.</span></div></li>
+          <li class="rv"><b>03</b><div><strong>Pick a build</strong><span>Join a discipline and start on a real project.</span></div></li>
+        </ol>
+        <p class="label muted rv" id="direct" style="margin-top:30px"></p>
+      </div>
+
+      <form class="form rv" id="joinForm" novalidate>
+        <p class="label tag" style="margin-bottom:18px">Membership application</p>
+        <h2 class="display h-md">Your details</h2>
+        <div class="row2">
+          <div class="field"><label class="label" for="name">Full name</label><input type="text" id="name" name="name" autocomplete="name" required><p class="msg label">Please tell us your name.</p></div>
+          <div class="field"><label class="label" for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required><p class="msg label">Enter a valid email address.</p></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label class="label" for="phone">Phone number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" required><p class="msg label">Enter a valid phone number.</p></div>
+          <div class="field"><label class="label" for="year">Year</label>
+            <select id="year" name="year" required><option value="">Select…</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Postgraduate</option><option>Other</option></select>
+            <p class="msg label">Select your year.</p></div>
+        </div>
+        <div class="field"><label class="label" for="prog">Programme / branch</label><input type="text" id="prog" name="programme" placeholder="e.g. B.Tech Mechanical" required><p class="msg label">Which programme are you in?</p></div>
+        <fieldset class="field" id="ints">
+          <legend class="label">What interests you? <span class="muted">(pick any)</span></legend>
+          <div class="checks">
+            <label><input type="checkbox" name="interests" value="Robotics"><span>Robotics</span></label>
+            <label><input type="checkbox" name="interests" value="Aviation"><span>Aviation</span></label>
+            <label><input type="checkbox" name="interests" value="Electronics"><span>Electronics</span></label>
+            <label><input type="checkbox" name="interests" value="AI &amp; Autonomy"><span>AI &amp; Autonomy</span></label>
+            <label><input type="checkbox" name="interests" value="Design &amp; Media"><span>Design &amp; Media</span></label>
+            <label><input type="checkbox" name="interests" value="Events &amp; Outreach"><span>Events &amp; Outreach</span></label>
+          </div>
+          <p class="msg label">Pick at least one.</p>
+        </fieldset>
+        <div class="field"><label class="label" for="about">What have you built, or what do you want to build?</label><textarea id="about" name="about" rows="4" placeholder="A sentence or two is plenty."></textarea></div>
+        <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form__foot">
+          <button class="btn" type="submit">Send application <span class="arr">→</span></button>
+          <span class="label muted">We only use this to contact you about Yantrix.</span>
+        </div>
+        <div class="form__status" id="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/join.js"></script>
+</body>
+</html>
