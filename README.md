@@ -2,7 +2,9 @@
 
 Official website for **Yantrix**, the robotics and aviation club of DY Patil International University, Akurdi, Pune.
 
-🌐 **Live Website**: [https://sanathdambre08.github.io/yantrix/](https://sanathdambre08.github.io/yantrix/)
+🌐 **Live Website (Vercel)**: [https://yantrix-dypiu.vercel.app](https://yantrix-dypiu.vercel.app)  
+🌐 **Live Website (GitHub Pages)**: [https://sanathdambre08.github.io/yantrix/](https://sanathdambre08.github.io/yantrix/)  
+📂 **GitHub Repository**: [https://github.com/SanathDambre08/yantrix](https://github.com/SanathDambre08/yantrix)
 
 ---
 
