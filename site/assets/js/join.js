@@ -14,6 +14,10 @@
 
   ["name", "email", "phone", "prog", "year"].forEach((id) => form[id === "prog" ? "prog" : id].addEventListener("input", (e) => fail(e.target, false)));
   form.ints = document.getElementById("ints");
+  const otherBox = document.getElementById("otherBox"), otherWrap = document.getElementById("otherWrap"), otherText = document.getElementById("otherText");
+  otherBox.addEventListener("change", () => { if (otherBox.checked) otherText.focus(); else otherWrap.classList.remove("err"); });
+  /* typing in the box ticks "Other" for you; clearing it unticks it */
+  otherText.addEventListener("input", () => { otherBox.checked = !!otherText.value.trim(); otherWrap.classList.remove("err"); form.ints.classList.remove("err"); });
   form.ints.addEventListener("change", () => fail(form.ints, false));
 
   form.addEventListener("submit", async (e) => {
@@ -22,14 +26,14 @@
     const d = {
       name: form.name.value.trim(), email: form.email.value.trim(), phone: form.phone.value.trim(), programme: form.prog.value.trim(),
       year: form.year.value, about: form.about.value.trim(),
-      interests: [...form.querySelectorAll("[name=interests]:checked")].map((c) => c.value),
+      interests: [...form.querySelectorAll("[name=interests]:checked")].map((c) => c.value === "Other" ? "Other: " + otherText.value.trim().replace(/[,\n]+/g, " ") : c.value),
     };
     const bad = {
-      name: !d.name, phone: !/^\+?[\d\s-]{10,15}$/.test(d.phone), email: !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email), prog: !d.programme, year: !d.year, ints: !d.interests.length,
+      name: !d.name, phone: !/^\+?[\d\s-]{10,15}$/.test(d.phone), email: !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email), prog: !d.programme, year: !d.year, ints: !d.interests.length, other: otherBox.checked && !otherText.value.trim(),
     };
-    fail(form.name, bad.name); fail(form.email, bad.email); fail(form.phone, bad.phone); fail(form.prog, bad.prog); fail(form.year, bad.year); fail(form.ints, bad.ints);
+    fail(form.name, bad.name); fail(form.email, bad.email); fail(form.phone, bad.phone); fail(form.prog, bad.prog); fail(form.year, bad.year); fail(form.ints, bad.ints); otherWrap.classList.toggle("err", !!bad.other);
     const first = Object.keys(bad).find((k) => bad[k]);
-    if (first) { say("A few details are missing — check the highlighted fields.", false); (first === "ints" ? form.ints.querySelector("input") : form[first]).focus(); return; }
+    if (first) { say("A few details are missing — check the highlighted fields.", false); (first === "ints" ? form.ints.querySelector("input") : first === "other" ? otherText : form[first]).focus(); return; }
 
     const btn = form.querySelector("button[type=submit]");
     if (C.formEndpoint) {

@@ -726,3 +726,52 @@ fieldset.field { border: 0; margin-left: 0; min-width: 0; padding: 0; margin-top
 
 .phead--team h1 { font-size: clamp(52px, 7.6vw, 140px); }
 @media (max-width: 900px) { .phead--team h1 { font-size: clamp(52px, 15vw, 110px); } }
+
+/* Join form: interest cards */
+.picks { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.picks label { margin: 0; cursor: pointer; display: block; }
+.picks input { position: absolute; opacity: 0; pointer-events: none; }
+.pick { position: relative; display: block; height: 100%; padding: 16px 18px 16px 48px; border: 1px solid var(--line-light); transition: background 0.25s, color 0.25s, border-color 0.25s; }
+.pick::before { content: ""; position: absolute; left: 16px; top: 19px; width: 18px; height: 18px; border: 1.5px solid currentColor; transition: background 0.2s; }
+.pick::after { content: ""; position: absolute; left: 22px; top: 22px; width: 6px; height: 10px; border: solid var(--paper); border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0); transition: transform 0.2s; }
+.pick b { display: block; font-family: var(--f-display); font-weight: 800; font-size: 24px; line-height: 1; text-transform: uppercase; letter-spacing: 0.01em; }
+.pick small { display: block; margin-top: 8px; font-size: 14px; line-height: 1.45; color: #4a5268; transition: color 0.25s; }
+.picks label:hover .pick { border-color: var(--text-on-paper); }
+.picks input:checked + .pick { background: var(--text-on-paper); color: var(--paper); border-color: var(--text-on-paper); }
+.picks input:checked + .pick::before { background: var(--orange); border-color: var(--orange); }
+.picks input:checked + .pick::after { transform: rotate(45deg) scale(1); border-color: var(--ink); }
+.picks input:checked + .pick small { color: #c3cadb; }
+.picks input:focus-visible + .pick { outline: 2px solid var(--orange); outline-offset: 2px; }
+.picks label:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.field.err .picks .pick { border-color: #d12b2b; }
+@media (max-width: 560px) { .picks { grid-template-columns: 1fr; } }
+
+.other { margin-top: 14px; padding: 18px 20px 4px; border-left: 3px solid var(--orange-deep); background: rgba(255, 122, 26, 0.08); animation: fade 0.3s; }
+.other[hidden] { display: none; }
+.other label { display: block; margin-bottom: 4px; color: #4a5268; }
+.other.err input { border-color: #d12b2b; } .other.err .msg { display: block; }
+.other input { margin-bottom: 14px; }
+.other .msg { margin-bottom: 14px; }
+
+/* "Other": full-width card with the writing box attached underneath */
+.picks > label:nth-last-child(2) { grid-column: 1 / -1; }
+.picks > .other { grid-column: 1 / -1; margin: -10px 0 0; padding: 16px 20px 6px; border: 1px solid var(--text-on-paper); border-top: 0; background: #fff; animation: none; }
+.other textarea { width: 100%; font: inherit; font-size: 17px; color: var(--text-on-paper); background: transparent; border: 0; border-bottom: 2px solid var(--line-light); padding: 8px 0 10px; resize: vertical; min-height: 56px; outline: none; border-radius: 0; margin-bottom: 12px; }
+.other textarea:focus { border-color: var(--orange-deep); }
+.other.err textarea { border-color: #d12b2b; }
+.other.err .msg { display: block; }
+.other .msg { margin-bottom: 12px; }
+.picks:has(#otherBox:not(:checked)) > .other { border-color: var(--line-light); }
+.picks > label:nth-child(5) { grid-column: 1 / -1; }
+
+/* compact interest cards */
+.picks { gap: 8px; }
+.pick { padding: 11px 12px 11px 38px; }
+.pick::before { left: 12px; top: 13px; width: 16px; height: 16px; }
+.pick::after { left: 17.5px; top: 15.5px; width: 5px; height: 9px; }
+.pick b { font-size: 20px; }
+.pick small { margin-top: 4px; font-size: 12.5px; line-height: 1.35; }
+.picks > .other { margin-top: -8px; padding: 12px 14px 2px; }
+.other label { font-size: 11px; }
+.other textarea { font-size: 15px; min-height: 44px; padding: 6px 0 8px; margin-bottom: 8px; }
+@media (max-width: 560px) { .pick { padding: 10px 12px 10px 38px; } .pick small { font-size: 12.5px; } }

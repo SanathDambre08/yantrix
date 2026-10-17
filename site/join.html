@@ -42,14 +42,19 @@
         </div>
         <div class="field"><label class="label" for="prog">Programme / branch</label><input type="text" id="prog" name="programme" placeholder="e.g. B.Tech Mechanical" required><p class="msg label">Which programme are you in?</p></div>
         <fieldset class="field" id="ints">
-          <legend class="label">What interests you? <span class="muted">(pick any)</span></legend>
-          <div class="checks">
-            <label><input type="checkbox" name="interests" value="Robotics"><span>Robotics</span></label>
-            <label><input type="checkbox" name="interests" value="Aviation"><span>Aviation</span></label>
-            <label><input type="checkbox" name="interests" value="Electronics"><span>Electronics</span></label>
-            <label><input type="checkbox" name="interests" value="AI &amp; Autonomy"><span>AI &amp; Autonomy</span></label>
-            <label><input type="checkbox" name="interests" value="Design &amp; Media"><span>Design &amp; Media</span></label>
-            <label><input type="checkbox" name="interests" value="Events &amp; Outreach"><span>Events &amp; Outreach</span></label>
+          <legend class="label">Which area interests you? <span class="muted">(pick any)</span></legend>
+          <div class="picks">
+            <label><input type="checkbox" name="interests" value="Tech &amp; Development"><span class="pick"><b>Tech &amp; Development</b><small>Core programming, automation, robotics scripting, and system integrations.</small></span></label>
+            <label><input type="checkbox" name="interests" value="CAD &amp; Hardware Design"><span class="pick"><b>CAD &amp; Hardware Design</b><small>Mechanical modeling, rapid prototyping, and structural design.</small></span></label>
+            <label><input type="checkbox" name="interests" value="Social Media &amp; PR"><span class="pick"><b>Social Media &amp; PR</b><small>Content creation, Hinglish video storytelling, branding, and digital outreach.</small></span></label>
+            <label><input type="checkbox" name="interests" value="Creative Design"><span class="pick"><b>Creative Design</b><small>Graphics, UI/UX, event posters, and visual assets.</small></span></label>
+            <label><input type="checkbox" name="interests" value="Management &amp; Operations"><span class="pick"><b>Management &amp; Operations</b><small>Event logistics, budgeting, sponsor relations, and execution strategy.</small></span></label>
+            <label><input type="checkbox" name="interests" value="Other" id="otherBox"><span class="pick"><b>Other</b><small>Something else you'd like to be part of? Write it in the box below.</small></span></label>
+            <div class="other" id="otherWrap">
+              <label class="label" for="otherText">Other — write what you'd like to be part of</label>
+              <textarea id="otherText" name="otherText" rows="2" maxlength="200" placeholder="Type here… e.g. Photography, Documentation, Drone racing"></textarea>
+              <p class="msg label">Tell us what you have in mind.</p>
+            </div>
           </div>
           <p class="msg label">Pick at least one.</p>
         </fieldset>
